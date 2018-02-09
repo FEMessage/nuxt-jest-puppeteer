@@ -1,5 +1,7 @@
 # Nuxt Jest Puppeteer
 
+*This plugin was made with love with the team at [studbits.com](https://studbits.com/).*
+
 # Installation
 
 ```bash
