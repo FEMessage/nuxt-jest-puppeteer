@@ -46,7 +46,7 @@ describe('Index page', () => {
   })
 ```
 
-We also add extra methods to the browser object to make it easier to test.
+We also add extra methods to the browser object to make it easy to test Nuxt pages:
 
 - `visitPage`, a Function, receives the route as a paramter and returns puppeteer's designated browser [page object](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-page), powered up with the following nuxt-related methods:
   - `html`, a Function, returns a promise that resolves to the page's outer HTML.
@@ -76,5 +76,5 @@ describe('Index page', () => {
   })
 ```
 
-For testing, see Jest's [assertion API](https://facebook.github.io/jest/docs/en/expect.html)
-and puppeteer's [browser API](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md) for browser testing.
+For a complete look at testing, see Jest's [assertion API](https://facebook.github.io/jest/docs/en/expect.html)
+and puppeteer's [browser API](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md).
