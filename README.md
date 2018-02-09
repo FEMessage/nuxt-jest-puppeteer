@@ -78,3 +78,9 @@ describe('Index page', () => {
 
 For a complete look at testing, see Jest's [assertion API](https://facebook.github.io/jest/docs/en/expect.html)
 and puppeteer's [browser API](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md).
+
+### License
+
+[MIT](./LICENSE)
+
+Copyright (c) 2017 Studbits
