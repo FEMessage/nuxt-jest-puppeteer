@@ -26,6 +26,8 @@ nuxt and have your complete testing environment setup with jest and puppeteer.
 
 Along with Jest's [global variables](https://facebook.github.io/jest/docs/en/api.html), we expose puppeteer's `browser` object and nuxt's `BASE_URL` to facilitate testing.
 
+Example usage:
+
 ```js
 describe('Index page', () => {
     let page
@@ -46,12 +48,32 @@ describe('Index page', () => {
 
 We also add extra methods to the browser object to make it easier to test.
 
-- `visitPage`, a Function, receives the route as a paramter and returns the designated [page object](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-page).
+- `visitPage`, a Function, receives the route as a paramter and returns puppeteer's designated browser [page object](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-page), powered up with the following nuxt-related methods:
+  - `html`, a Function, returns a promise that resolves to the page's outer HTML.
+  - `nuxt`, Object with the following helpers:
+    - `navigate`, a Function, accepts a path so that you can change pages.
+    - `loadingData`, a Function, that resolves to an object with the current Loading data.
+    - `routeData`, a Function, that resolves to an object with the current Route data.
+    - `errorData`, a Function, that resolves to an object containing any Nuxt errors.
+    - `storeState`, a Function, that resolves to an object with the current Store state.
+
+Example usage:
 
 ```js
-beforeAll(async () => {
-  page = await browser.visitPage('/login')
-})
+describe('Index page', () => {
+    let page
+    beforeAll(async () => {
+      page = await browser.visitPage('/home')
+    })
+    afterAll(async () => {
+      await page.close()
+    })
+
+    it('renders index page', async () => {
+      const elStr = await page.html()
+      expect(elStr).toBeTruthy()
+    })
+  })
 ```
 
 For testing, see Jest's [assertion API](https://facebook.github.io/jest/docs/en/expect.html)
