@@ -1,6 +1,6 @@
 # Nuxt Jest Puppeteer
 
-*This plugin was made with love with the team at [studbits.com](https://studbits.com/).*
+*This plugin was made with joy while working on testing at [studbits.com](https://studbits.com/).*
 
 # Installation
 
