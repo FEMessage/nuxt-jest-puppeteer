@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+const readPkg = require('read-pkg')
+const runTest = require('../lib/index')
+
+const pkg = readPkg.sync(process.cwd())
+const config = pkg.jest
+
+runTest({
+  argv: process.argv.slice(2),
+  config
+})
