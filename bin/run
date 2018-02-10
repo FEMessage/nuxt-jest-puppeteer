@@ -3,6 +3,8 @@
 const readPkg = require('read-pkg')
 const runTest = require('../lib/index')
 
+process.env.SELF_START = false
+
 const pkg = readPkg.sync(process.cwd())
 const config = pkg.jest
 

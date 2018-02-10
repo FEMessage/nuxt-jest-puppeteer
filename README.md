@@ -81,6 +81,35 @@ describe('Index page', () => {
 For a complete look at testing, see Jest's [assertion API](https://facebook.github.io/jest/docs/en/expect.html)
 and puppeteer's [browser API](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md).
 
+### Advanced Usage
+
+If you'd like to run Nuxt yourself, set the environment variable `SELF_START` to true.
+
+In order for Nuxt test helpers to still work, you must set the `BASE_URL` as well.
+
+Here's an example of how to run `nuxt-jest-puppeteer` programmatically:
+
+```js
+const runTest = require('nuxt-jest-puppeteer')
+
+process.env.SELF_START = true
+process.env.BASE_URL = `http:localhost:3000`
+
+Promise.all([runNuxtClient(), runAdonisApi()])
+  .then(([client, api]) => {
+    let runner
+    try {
+      runner = runTest()
+    } finally {
+      Promise.resolve(runner)
+        .then(() => {
+          client.close()
+          api.close()
+        })
+        .catch(() => process.exit())
+    }
+  })
+```
 ### License
 
 [MIT](./LICENSE)
