@@ -11,9 +11,12 @@ npm install nuxt-jest-puppeteer --save-dev
 
 # Setup
 
-Add the following script to your `package.json`.
+Add the following to your `package.json`.
 
 ```json
+"babel": {
+   "presets": ["es2015"]
+},
 "scripts": {
   "test": "nuxt-jest-puppeteer",
 }
