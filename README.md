@@ -37,7 +37,7 @@ Example usage:
 describe('Index page', () => {
     let page
     beforeAll(async () => {
-      const page = await browser.newPage()
+      page = await browser.newPage()
       await page.goto(BASE_URL)
     })
     afterAll(async () => {
