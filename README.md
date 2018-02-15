@@ -15,7 +15,7 @@ Add the following to your `package.json`.
 
 ```json
 "babel": {
-   "presets": ["es2015"]
+   "presets": ["env"]
 },
 "scripts": {
   "test": "nuxt-jest-puppeteer",
