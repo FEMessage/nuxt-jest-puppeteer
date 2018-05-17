@@ -1,6 +1,6 @@
 {
-  "name": "nuxt-jest-puppeteer",
-  "version": "0.3.7",
+  "name": "nuxt-puppeteer-jest",
+  "version": "0.0.2",
   "description": "Nuxt Jest Zero Config Testing",
   "main": "lib/index.js",
   "bin": "bin/run",
