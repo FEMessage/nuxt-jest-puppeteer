@@ -20,7 +20,7 @@ npm install nuxt-puppeteer-jest --save-dev
 
 版本默认配置支持async/await语法, 不支持import, 如果想要自定义es6/7特性, 请添加babel6配置, 并安装相应依赖
 
-```json
+```js
 //babel选填
 "babel": {  
   "presets": ["env"]
