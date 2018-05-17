@@ -1,6 +1,8 @@
 # Nuxt Puppeteer Jest
 
-*This plugin was made while using Nuxt-Jest-Puppeteer, I made it compatible to Nuxt2, and made puppeteer custom configuration possible*
+*This plugin was made while some error come up using Nuxt-Jest-Puppeteer within Nuxt2 proj, I made it compatible to Nuxt2, and made puppeteer custom configuration possible*
+
+thanks for Studbits :)
 
 *This plugin was made while working on testing for [studbits.com](https://studbits.com/). We hope you find it useful!*
 
@@ -119,4 +121,4 @@ Promise.all([runNuxtClient(), runAdonisApi()])
 
 [MIT](./LICENSE)
 
-Copyright (c) 2017 Studbits
+Copyright (c) 2017 hibad
