@@ -9,6 +9,8 @@ if (process.env.SELF_START &&
 }
 
 const pkg = readPkg.sync(process.cwd())
+//save this for puppeteer configuration
+global.__PKG__ = pkg;
 const config = pkg.jest
 
 runTest({
