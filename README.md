@@ -1,4 +1,6 @@
-# Nuxt Jest Puppeteer
+# Nuxt Puppeteer Jest
+
+*This plugin was made while using Nuxt-Jest-Puppeteer, I made it compatible to Nuxt2, and made puppeteer custom configuration possible*
 
 *This plugin was made while working on testing for [studbits.com](https://studbits.com/). We hope you find it useful!*
 
