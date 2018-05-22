@@ -95,16 +95,17 @@ describe('Index page', () => {
   })
 ```
 
-For a complete look at testing, see Jest's [assertion API](https://facebook.github.io/jest/docs/en/expect.html)
-and puppeteer's [browser API](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md).
+了解更多 Jest 的用法请到文档查看 [assertion API](https://facebook.github.io/jest/docs/en/expect.html)
+和 puppeteer [browser API](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md).
 
-### Advanced Usage
 
-If you'd like to run Nuxt yourself, set the environment variable `SELF_START` to true.
+### 高端用法
 
-In order for Nuxt test helpers to still work, you must set the `BASE_URL` as well.
+如果你喜欢自己跑 Nuxt, 你可以把enviroment变量`SELF_START`设置成true.
 
-Here's an example of how to run `nuxt-jest-puppeteer` programmatically:
+为了让Nuxt测试工具工作, 你必须设置 `BASE_URL` 
+
+以下是一个例子, 如何自己跑 `nuxt-puppeteer-jest`:
 
 ```js
 const runTest = require('nuxt-jest-puppeteer')
@@ -127,7 +128,7 @@ Promise.all([runNuxtClient(), runAdonisApi()])
     }
   })
 ```
-### License
+### 协议
 
 [MIT](./LICENSE)
 
