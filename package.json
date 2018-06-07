@@ -1,7 +1,11 @@
 {
   "name": "nuxt-puppeteer-jest",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Nuxt Jest Zero Config Testing(You can custom some config now)",
+  "repository" :{ 
+    "type" : "git",
+     "url" : "https://github.com/PepperYan/nuxt-jest-puppeteer.git"
+  },
   "main": "lib/index.js",
   "bin": "bin/run",
   "author": "Alid Castano && hibad",
